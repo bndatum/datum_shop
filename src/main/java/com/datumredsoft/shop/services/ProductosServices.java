@@ -23,7 +23,6 @@ public class ProductosServices implements ProductosInterface {
 
         RespuestaModelo response = new RespuestaModelo();
         List<ProductosModelo> listaProductos = new ArrayList<>();
-        List<ProductosModelo> listaProductosResponse = new ArrayList<>();
 
         try {
                 for (String nombreIma : nombreImagenes) {
@@ -44,7 +43,7 @@ public class ProductosServices implements ProductosInterface {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        response.setProductoRespuesta(listaProductosResponse);
+        response.setProductoRespuesta(listaProductos);
 
         return response;
     }
