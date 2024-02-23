@@ -23,10 +23,12 @@ public class ProductosServices implements ProductosInterface {
 	public RespuestaModelo getAllProductos() {
 		RespuestaModelo response = new RespuestaModelo();
 		List<ProductosModelo> listaProductos = new ArrayList<>();
-		List<ProductosModelo> listaProductosResponse = new ArrayList<>();
 		
 		try {
 			File carpeta = new File("src/main/resources/img");
+			ObjectMapper mapper = new ObjectMapper();
+			System.out.println("La lista es");
+			System.out.println(mapper.writeValueAsString(carpeta.list()));
 			//Ciclo para Saturacion RAM y CPU
 			for (int i = 0; i < 2; i++) {
 				for(String nombreIma : carpeta.list())
@@ -47,7 +49,7 @@ public class ProductosServices implements ProductosInterface {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
-		response.setProductoRespuesta(listaProductosResponse);
+		response.setProductoRespuesta(listaProductos);
 		
 		return response;
 	}
@@ -63,6 +65,9 @@ public class ProductosServices implements ProductosInterface {
 				limite = 30;
 			
 			File carpeta = new File("src/main/resources/img");
+			ObjectMapper mapper = new ObjectMapper();
+			System.out.println("La lista es");
+			System.out.println(mapper.writeValueAsString(carpeta.list()));
 			//Ciclo para Saturacion RAM y CPU
 			for (int i = 0; i < 5; i++) {
 				for(String nombreIma : carpeta.list())
