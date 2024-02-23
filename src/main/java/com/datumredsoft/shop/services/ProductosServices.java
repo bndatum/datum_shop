@@ -16,7 +16,7 @@ import com.datumredsoft.shop.modelo.RespuestaModelo;
 
 @Service("ProductosServices")
 public class ProductosServices implements ProductosInterface {
-	String[] nombreImagenes = {"arrocera.png", "aspiradora_robot.png", "batidora_jugos.png", "batidora_masa.png", "cable_vga.png", "cafetera.png", "cafetera_artesanal.png", "combo_teclado_mouse.png", "combo_teclado_raton.png", "estufa.png", "freidora_aire.png", "gamecube.png", "headset.png", "horno.png", "horno_electrico.png", "juego_hoyas.png", "juego_te.png", "laptop_msi.png", "mac.png", "microondas.png", "nintendo_switch.png", "nintendo_switch_completo.png", "parlante.png", "pc_all_in_one.png", "pc_gamer.png", "ps2.png", "ps4.png", "router.png", "silla.png", "tetera.png"};
+	String[] nombreImagenes = {"arrocera.jpg", "aspiradora_robot.jpg", "batidora_jugos.jpg", "batidora_masa.jpg", "cable_vga.jpg", "cafetera.jpg", "cafetera_artesanal.jpg", "combo_teclado_mouse.jpg", "combo_teclado_raton.jpg", "estufa.jpg", "freidora_aire.jpg", "gamecube.jpg", "headset.jpg", "horno.jpg", "horno_electrico.jpg", "juego_hoyas.jpg", "juego_te.jpg", "laptop_msi.jpg", "mac.jpg", "microondas.jpg", "nintendo_switch.jpg", "nintendo_switch_completo.jpg", "parlante.jpg", "pc_all_in_one.jpg", "pc_gamer.jpg", "ps2.jpg", "ps4.jpg", "router.jpg", "silla.jpg", "tetera.jpg"};
 	
 	@Override
 	public RespuestaModelo getAllProductos() {
